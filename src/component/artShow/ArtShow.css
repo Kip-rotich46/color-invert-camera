@@ -1,0 +1,46 @@
+/* src/ArtShow.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all items in the container */
+    padding: 20px; /* Adds some padding */
+}
+
+.qr-code-container {
+    margin: 5px 0; /* Adds some margin above and below the QR code */
+    display: flex;
+    justify-content: center; /* Centers QR code horizontally */
+}
+
+.artwork-container {
+    margin-top: 20px; /* Spacing above artwork */
+    text-align: center; /* Centers the artwork */
+}
+
+.video-container {
+    margin-top: 20px; /* Spacing above video canvas */
+    border: 2px solid #ccc; /* Adds a border around the video container */
+    border-radius: 10px 10px 0 0; /* Rounds only the top corners */
+    overflow: hidden; /* Ensures that the rounded corners are effective */
+    position: relative; /* Positions children relative to this container */
+}
+
+canvas {
+    display: block; /* Ensures no extra space below canvas */
+}
+
+.button-snap {
+    margin-top: 10px; /* Adds spacing above the snapshot button */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for the button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s; /* Transition effect for hover */
+}
+
+.button-snap:hover {
+    background-color: #007BFF; /* Change color on hover */
+    color: white; /* Text color on hover */
+}
+
+/* Add other necessary styles for your layout here */

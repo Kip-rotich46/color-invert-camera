@@ -1,0 +1,36 @@
+/* src/component/artShow/Gallery.css */
+
+.gallery {
+    padding: 20px;
+}
+
+.gallery h2 {
+    text-align: center; /* Centers the title */
+    margin-bottom: 15px; /* Adds spacing between title and images */
+    font-size: 1.5rem; /* Adjust font size */
+    color: #333; /* Text color for visibility */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-auto-rows: auto;
+    gap: 10px; /* Space between images */
+    justify-items: center; /* Centers images horizontally in their cells */
+}
+
+.gallery-image {
+    width: 100%; /* Makes images responsive within grid cells */
+    max-width: 350px; /* Maximum width for the images */
+    height: 250px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures images cover the space without stretching */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Override for the fifth image to center it in the last row */
+.gallery-image:nth-child(5) {
+    grid-column: span 2; /* Takes up both columns */
+    width: 100%; /* Adjusts width to be centered */
+    margin: 0 auto; /* Centers the fifth image */
+}

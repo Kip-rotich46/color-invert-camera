@@ -1,0 +1,27 @@
+/* src/App.css */
+
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Makes both children occupy equal height */
+  padding: 20px;
+  height: 100vh; /* Full viewport height */
+}
+
+.gallery, .interactive-section {
+  flex: 1; /* Allows components to grow equally */
+  max-width: 50%; /* Ensures each component takes up half the page */
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column; /* Aligns items vertically in the component */
+  height: 100vh;
+}
+
+.gallery {
+  justify-content: center; /* Centers the content vertically */
+}
+
+.interactive-section {
+  height: 100vh;
+
+}
