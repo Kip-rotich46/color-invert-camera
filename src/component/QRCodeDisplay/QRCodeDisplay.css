@@ -1,0 +1,35 @@
+/* src/component/artShow/ArtShow.css */
+
+.qr-code-container {
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Arranges children in a column */
+    align-items: center; /* Centers children horizontally */
+    justify-content: space-between; /* Space between the QR code and the text */
+    margin: 20px; /* Optional: adds margin for spacing */
+}
+
+.qr-code-container canvas {
+    margin-bottom: 5px; /* Adds margin below the QR code */
+}
+
+.qr-code-container p {
+    margin-top: 10px;
+    font-size:x-large;
+    font-weight: bold;
+    animation: fadeInOut 10s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(-10px); /* Slightly move up */
+    }
+    50% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move back to original position */
+    }
+    100% {
+        opacity: 0; /* Fade out */
+        transform: translateY(10px); /* Move slightly down */
+    }
+}

@@ -1,6 +1,6 @@
 // src/ArtShow.js
 import React, { useEffect, useRef, useState } from 'react';
-import { QRCodeCanvas } from 'qrcode.react';
+import QRCodeDisplay from '../QRCodeDisplay/QRCodeDisplay'; // Import the new component
 import './ArtShow.css';
 
 const ArtworkDisplay = ({ showArtwork }) => {
@@ -76,7 +76,7 @@ const ArtShow = () => {
     }, []);
 
     const handleQRCodeScan = () => {
-        setShowArtwork(true);
+        setShowArtwork(true); // Show artwork when QR code is scanned
     };
 
     const takeSnapshot = () => {
@@ -107,11 +107,7 @@ const ArtShow = () => {
 
     return (
         <div className="container interactive-section">
-            <h1>Art Show Interactive Experience</h1>
-            <p>Scan the QR code to see the inverted colors live!</p>
-            <div className="qr-code-container">
-                <QRCodeCanvas value="your-qr-code-url" onClick={handleQRCodeScan} />
-            </div>
+            <QRCodeDisplay onScan={handleQRCodeScan} /> {/* Use the QRCodeDisplay component */}
             <ArtworkDisplay showArtwork={showArtwork} />
             <div className="video-container">
                 <video ref={videoRef} style={{ display: 'none' }} />

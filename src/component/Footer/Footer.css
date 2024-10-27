@@ -1,0 +1,93 @@
+/* src/component/Footer.css */
+footer {
+    background: linear-gradient(to bottom right, #552f66, #a71d28); /* Darkened versions */
+    color: #fff; /* Keep text white for contrast */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for separation */
+    font-size: 14px; /* Adjust as needed */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.footer .profile img {
+    border-radius: 50%; /* Makes the image circular */
+    width: 50px; /* Size of the profile picture */
+    height: 50px; /* Size of the profile picture */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px; /* Space between image and text */
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-right {
+    text-align: right; /* Aligns text to the right */
+}
+
+.social-media{
+    margin-left: 50px;
+}
+
+.artist-profile {
+    margin-right: 50px;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.artist-info h6 {
+    font-size: larger;
+    font-weight: bold;
+    color: #fff;
+}
+
+.social-media a {
+    margin: 0 10px; /* Space between links */
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1rem; /* Text color */
+}
+
+.social-media ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px; /* Space between social media links */
+}
+
+.social-media a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.developer-info {
+    margin-top: 10px; /* Space above developer info */
+}
