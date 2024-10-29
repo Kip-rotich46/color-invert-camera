@@ -1,0 +1,47 @@
+/* src/component/Navbar/Navbar.css */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #7b4397;
+    background: linear-gradient(90deg, #7b4397, #dc2430);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0; /* Remove any default margin */
+    display: flex; /* Ensures alignment in flex containers */
+    align-items: center;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    margin: 0; /* Ensures links align properly */
+}
+
+.navbar-links li {
+    display: inline-block;
+    margin: 10px; /* Ensures items are in line */
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    color: #e8e8e8;
+}

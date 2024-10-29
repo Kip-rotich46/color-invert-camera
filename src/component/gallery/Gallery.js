@@ -1,6 +1,7 @@
-// src/component/artShow/Gallery.js
+// src/component/gallery/Gallery.js
 import React from 'react';
-import { initialImages, additionalImages } from '../../constants/imageConstants'; // Adjust the import path as needed
+import { initialImages } from '../../constants/imageConstants'; // Adjust the import path as needed
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './Gallery.css';
 
 const Gallery = () => {
@@ -14,6 +15,7 @@ const Gallery = () => {
                     <img key={index} src={src} alt={`Artwork ${index + 1}`} className="gallery-image" />
                 ))}
             </div>
+            <Link to="/art-gallery" className="show-more-button">Show More</Link> {/* Link to ArtGallery */}
         </div>
     );
 };

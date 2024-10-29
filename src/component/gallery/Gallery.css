@@ -30,13 +30,32 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     display: flex; /* Enable flexbox */
     justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
+    align-items: center;
+    transition: transform 0.2s; /* Center the image vertically */
 }
-
 
 /* Override for the fifth image to center it in the last row */
 .gallery-image:nth-child(5) {
     grid-column: span 2; /* Takes up both columns */
     width: 100%; /* Adjusts width to be centered */
     margin: 0 auto; /* Centers the fifth image */
+}
+.gallery-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.show-more-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #dc2430; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.show-more-button:hover {
+    background-color: #7b4397; /* Darker shade on hover */
 }
