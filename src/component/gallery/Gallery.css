@@ -8,13 +8,13 @@
     text-align: center; /* Centers the title */
     margin-bottom: 15px; /* Adds spacing between title and images */
     font-size: 1.5rem; /* Adjust font size */
-    color: #333;
+    color: white;
     font-weight: bold; /* Text color for visibility */
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-auto-rows: auto; /* Allows rows to auto size based on content */
     gap: 10px; /* Space between images */
     justify-items: center; /* Centers images horizontally in their cells */
@@ -24,7 +24,7 @@
     width: 100%; /* Makes images responsive within grid cells */
     max-width: 350px; /* Maximum width for the images */
     height: auto; /* Allow height to adjust based on aspect ratio */
-    max-height: 250px; /* Adjust the max height to fit your content */
+    height: 350px; /* Adjust the max height to fit your content */
     object-fit: cover; /* Ensures images cover the space without stretching */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);

@@ -48,7 +48,7 @@ const ImageUpload = ({ onUploadComplete }) => {
             <button onClick={handleUpload} disabled={!image || uploading}>
                 {uploading ? "Uploading..." : "Upload Image"}
             </button>
-            {imageURL && <p>Image URL: <a href={imageURL} target="_blank" rel="noopener noreferrer">{imageURL}</a></p>}
+            {imageURL && <p className='imageUrl'>Image URL: <a href={imageURL} target="_blank" rel="noopener noreferrer">{imageURL}</a></p>}
         </div>
     );
 };

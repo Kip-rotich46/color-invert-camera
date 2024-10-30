@@ -17,12 +17,15 @@ function App() {
                 <h1 className='heading'>Art Show Interactive Experience</h1>
                 <Routes>
                     {/* Main route with Gallery and ArtShow side by side */}
-                    <Route path="/" element={
-                        <div className="flex-row">
-                            <Gallery />
-                            <ArtShow />
-                        </div>
-                    } />
+                    <Route 
+                        path="/" 
+                        element={
+                            <div className="flex-row">
+                                <Gallery />
+                                <ArtShow />
+                            </div>
+                        } 
+                    />
                     {/* Route for Image Upload */}
                     <Route path="/upload" element={<ImageUpload />} />
                     {/* Route for Art Gallery */}

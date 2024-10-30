@@ -1,21 +1,34 @@
 // src/component/gallery/Gallery.js
-import React from 'react';
-import { initialImages } from '../../constants/imageConstants'; // Adjust the import path as needed
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import React, { useEffect, useState } from 'react';
+import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
+import { Link } from 'react-router-dom';
 import './Gallery.css';
 
 const Gallery = () => {
-    const displayedImages = initialImages.slice(0, 5); // Get only the first 5 images
+    const [images, setImages] = useState([]);
+    const storage = getStorage();
+
+    useEffect(() => {
+        const fetchImages = async () => {
+            const storageRef = ref(storage, 'images/');
+            const imageRefs = await listAll(storageRef);
+            const urls = await Promise.all(
+                imageRefs.items.map(itemRef => getDownloadURL(itemRef))
+            );
+            setImages(urls);
+        };
+        fetchImages();
+    }, []);
 
     return (
         <div className="gallery">
             <h2>Art Gallery</h2>
             <div className="gallery-grid">
-                {displayedImages.map((src, index) => (
+                {images.slice(0, 5).map((src, index) => (  // Display the first 5 images
                     <img key={index} src={src} alt={`Artwork ${index + 1}`} className="gallery-image" />
                 ))}
             </div>
-            <Link to="/art-gallery" className="show-more-button">Show More...</Link> {/* Link to ArtGallery */}
+            <Link to="/art-gallery" className="show-more-button">Show More...</Link>
         </div>
     );
 };

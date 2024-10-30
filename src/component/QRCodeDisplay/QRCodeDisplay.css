@@ -13,6 +13,7 @@
 }
 
 .qr-code-container p {
+    color: white;
     margin-top: 10px;
     font-size:x-large;
     font-weight: bold;
