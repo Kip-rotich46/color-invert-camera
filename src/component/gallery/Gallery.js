@@ -15,7 +15,7 @@ const Gallery = () => {
                     <img key={index} src={src} alt={`Artwork ${index + 1}`} className="gallery-image" />
                 ))}
             </div>
-            <Link to="/art-gallery" className="show-more-button">Show More</Link> {/* Link to ArtGallery */}
+            <Link to="/art-gallery" className="show-more-button">Show More...</Link> {/* Link to ArtGallery */}
         </div>
     );
 };

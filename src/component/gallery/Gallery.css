@@ -45,17 +45,19 @@
 }
 
 .show-more-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #dc2430; /* Button color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    display: inline-block; /* Makes the link behave like a button */
+    padding: 10px 20px; /* Adds padding for a better look */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Removes underline */
+    font-size: 16px; /* Font size */
+    text-align: center; /* Center the text */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .show-more-button:hover {
-    background-color: #7b4397; /* Darker shade on hover */
+    background-color: #0056b3; /* Darker shade on hover */
 }
